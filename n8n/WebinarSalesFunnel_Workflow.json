@@ -707,8 +707,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        -576,
-        544
+        -1024,
+        -96
       ],
       "id": "5bb67abf-dd54-4930-be21-f4a13b97cd04",
       "name": "Wait",
@@ -784,8 +784,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -16,
-        544
+        -464,
+        -96
       ],
       "id": "5bb28930-28f2-402b-b445-634457e315aa",
       "name": "Check Payment Status-2"
@@ -802,8 +802,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        272,
-        528
+        -176,
+        -112
       ],
       "id": "99968b51-2229-4613-a108-8bb5792a7229",
       "name": "Nurture1",
@@ -823,8 +823,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        816,
-        528
+        368,
+        -112
       ],
       "id": "8a3777df-10c5-493b-9da0-32c39e887f18",
       "name": "Wait1",
@@ -891,8 +891,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1360,
-        528
+        912,
+        -112
       ],
       "id": "10c573f3-50d3-40f3-b541-f0ab41722812",
       "name": "Check Payment Status-3"
@@ -1490,8 +1490,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        1664,
-        512
+        1216,
+        -128
       ],
       "id": "557d0e63-9a9a-4ea8-9936-395fd2220194",
       "name": "Send a message",
@@ -1745,8 +1745,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        544,
-        528
+        96,
+        -112
       ],
       "id": "bdc51c19-7e9b-48e2-bc0c-c8e85ef18649",
       "name": "Append or update row in sheet3",
@@ -2881,8 +2881,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -608,
-        0
+        -416,
+        528
       ],
       "id": "d9bc502e-0a35-44d4-9783-38b79f86b492",
       "name": "Login",
@@ -2917,8 +2917,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -400,
-        0
+        -208,
+        528
       ],
       "id": "9927f8f0-2436-4efc-91f0-29da5dad62d1",
       "name": "Get row(s) in sheet7",
@@ -2958,8 +2958,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -176,
-        0
+        16,
+        528
       ],
       "id": "b3e78da5-f8ea-4a71-aaa3-25b5fa69883d",
       "name": "Registered?"
@@ -2973,8 +2973,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        32,
-        -96
+        224,
+        432
       ],
       "id": "e506d0d0-1252-40bb-89f4-daa947ac3d5f",
       "name": "Respond to Webhook8"
@@ -2988,8 +2988,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        32,
-        96
+        224,
+        624
       ],
       "id": "ec353191-754a-4d40-89de-bf4279ba7c8a",
       "name": "Respond to Webhook9"
@@ -3024,8 +3024,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -288,
-        544
+        -736,
+        -96
       ],
       "id": "cc650b92-e439-4427-aa66-e49b018622f1",
       "name": "Get row(s) in sheet8",
@@ -3065,8 +3065,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1088,
-        528
+        640,
+        -112
       ],
       "id": "52801831-43a3-4003-839e-668c7d416ba4",
       "name": "Get row(s) in sheet9",
@@ -3287,8 +3287,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1920,
-        512
+        1472,
+        -128
       ],
       "id": "946a13c0-9c00-4e59-9433-99fc547383bb",
       "name": "Append or update row in sheet4",
@@ -4242,8 +4242,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -672,
-        -208
+        -480,
+        320
       ],
       "id": "3a32ab58-93e7-477d-bb5a-e6f1f08f3b48",
       "name": "Sticky Note"
@@ -4258,8 +4258,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -704,
-        432
+        -1152,
+        -208
       ],
       "id": "e88aa6e3-e46b-4132-8f51-e588ab540c7a",
       "name": "Sticky Note1"
@@ -4345,7 +4345,7 @@
     {
       "parameters": {
         "content": "## Query Form\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
-        "height": 656,
+        "height": 672,
         "width": 3296,
         "color": 2
       },
@@ -4581,7 +4581,9 @@
         "sendTo": "={{ $('Get row(s) in sheet5').item.json.email }}",
         "subject": "TickedID Closed!",
         "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope you're doing well. Since we did not receive any response from you within the given time\n    and we had already shared a resolution for your query, your support ticket has now been \n    <strong>closed</strong>.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    If you still feel that your issue needs further attention or you are not fully satisfied with the \n    resolution provided, you are welcome to <strong>raise a new ticket</strong> regarding the same matter.  \n    We are always here to help you — our team is dedicated to solving your problems and ensuring that \n    you have a smooth and supportive experience with us.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for being with us and giving us the opportunity to assist you. We truly appreciate your \n    time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
-        "options": {}
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
@@ -4604,7 +4606,9 @@
         "sendTo": "={{ $('Get row(s) in sheet5').item.json.email }}",
         "subject": "Query Update!",
         "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Escalation Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for reaching out to us and sharing your concern. We truly appreciate your patience.  \n    As we have already provided a response to your query and understand that you are still not fully \n    satisfied with the resolution, we want to ensure your issue gets the attention it deserves.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    To help you further, we have <strong>escalated your ticket to our Admin Team</strong>.  \n    They will carefully review your case and provide you with additional assistance to fully resolve \n    your issue. You can expect them to contact you shortly with the next steps.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our goal is always to support you in the best possible way, and we are committed to ensuring your \n    concerns are addressed thoroughly. Thank you once again for your cooperation, patience, and trust \n    in our support team — we’re here to help you every step of the way.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Warm Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
-        "options": {}
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
@@ -4777,7 +4781,9 @@
         "sendTo": "={{ $('Tckt Expiring').item.json.email }}",
         "subject": "Query Resolved!",
         "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope your query has been successfully resolved. Since we haven't heard back from you after we shared \n    the response to your query, we are assuming that everything is now working fine on your end.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Therefore, we are closing your support ticket with the following Ticket ID: {{ $('Append row in sheet1').item.json.ticket_id }}<br>\n    <strong style=\"color:#2563eb;font-size:17px;\"></strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you so much for being with us and allowing us the opportunity to assist you.  \n    We sincerely appreciate your time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
-        "options": {}
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
@@ -4986,7 +4992,9 @@
         "sendTo": "={{ $json.email }}",
         "subject": "Query Update!",
         "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for reaching out to us. We have reviewed your query, and it appears that it requires further authentication and internal verification.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    To ensure this is handled correctly, we have forwarded your case to our admin team. They will personally review it and get in touch with you shortly with an update or the next steps.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Your support ticket has been logged with the following Ticket ID: <strong>{{ $('Append row in sheet1').item.json.ticket_id }}</strong>.  \n    Please keep this ID handy for any future correspondence.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We appreciate your patience and understanding while we look into this further. Rest assured, our team is working to ensure this gets resolved as soon as possible.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
-        "options": {}
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
@@ -5252,6 +5260,542 @@
       ],
       "id": "d28c9531-9914-475c-95eb-5a0b9da99b8c",
       "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $json.body.ticket_id }}",
+            "query_reply": "={{ $json.body.query_reply }}",
+            "query_resolved_by": "={{ $json.body.query_resolved_by }}",
+            "query_resolved_timestamp": "={{ $json.body.query_resolved_timestamp }}",
+            "query_status": "={{ $json.body.query_status }}"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -784,
+        2832
+      ],
+      "id": "8529b4fa-6dd6-4fa6-b8d2-7db3e3caaa1f",
+      "name": "Append or update row in sheet9",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $('Get row(s) in sheet5').item.json.ticket_id }}",
+            "query_status": "Pending Approval",
+            "query_reply": "=AI Response: {{ $('Get row(s) in sheet5').item.json.query_reply }}"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -688,
+        2368
+      ],
+      "id": "db14f7af-3263-4032-8b49-ccf09c407ace",
+      "name": "Append or update row in sheet12",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send-response",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1024,
+        2768
+      ],
+      "id": "e7ba970d-1f5b-487f-9223-483078d7cecb",
+      "name": "Admin Processed",
+      "webhookId": "2b019c8b-0d46-45b0-bb1b-8011596d994f"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Admin Processed').item.json.body.email }}",
+        "subject": "Query Resolution",
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Admin Resolution Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Admin Processed').item.json.body.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for your patience while we reviewed your concern.  \n    We understand how important it is for you to receive a clear and satisfactory resolution.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our <strong>Admin Team has thoroughly reviewed your ticket</strong> and carefully evaluated the details of your issue.  \n    After completing the verification and assessment process, they have provided the following response as the best possible resolution for your case:\n  </p>\n\n  <!-- Admin Reply -->\n  <div style=\"background:#eaf2ff;padding:16px;border-radius:10px;border-left:4px solid #2563eb;margin-bottom:22px;\">\n    <p style=\"font-size:16px;line-height:1.6;margin:0;color:#1f2937;\">\n      {{ $('Admin Processed').item.json.body.query_reply }}\n    </p>\n  </div>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope this clarifies your concern and provides the support you were looking for.  \n    If you still have any questions or need further assistance, please feel free to reply —  \n    we are always here to help you.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Warm Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -576,
+        2832
+      ],
+      "id": "00f7ac37-5596-4a85-96c8-a5f84e489127",
+      "name": "Send a message6",
+      "webhookId": "47a5cfd0-cbd2-4a1e-bb11-c922b8bc9f10",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "52KHeGZTCkD8VFtm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Admin Resolution\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
+        "height": 416,
+        "width": 1232,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1136,
+        2592
+      ],
+      "id": "7af95c29-cfb5-4ec3-96d2-b2518baf8e77",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": \"true\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -784,
+        2640
+      ],
+      "id": "4bb7f9ae-1ad5-413f-8b67-0095a27f2bf3",
+      "name": "Respond to Webhook14"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $('Append or update row in sheet9').item.json.ticket_id }}",
+            "query_resolved_by": "={{ $('Append or update row in sheet9').item.json.query_resolved_by }}",
+            "query_timestamp": "=",
+            "query_resolved_timestamp": "={{ $('Append or update row in sheet9').item.json.query_resolved_timestamp }}",
+            "query_status": "Closed"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -160,
+        2832
+      ],
+      "id": "bdbb3521-3a8c-4a1e-9b74-bd8c338e0fd3",
+      "name": "Append or update row in sheet13",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -368,
+        2832
+      ],
+      "id": "99dd311e-62a4-4c48-81bf-cce8b20b53f8",
+      "name": "Wait4",
+      "webhookId": "a3cb2c1d-5ece-4484-ac9a-47ec8ab4c165"
     }
   ],
   "pinData": {},
@@ -6075,7 +6619,13 @@
     },
     "Send a message3": {
       "main": [
-        []
+        [
+          {
+            "node": "Append or update row in sheet12",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Append or update row in sheet10": {
@@ -6161,13 +6711,62 @@
           }
         ]
       ]
+    },
+    "Admin Processed": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet9": {
+      "main": [
+        [
+          {
+            "node": "Send a message6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message6": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "db5744f5-2dba-4951-8616-9f56aa5ed189",
+  "versionId": "996668c8-b5e4-4823-9c73-7a11f8519aa1",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "9dbeb3cfafb3fa34b80362963ab4e0ff934b90fa5cb184bc15f39cf374ffdc98"
