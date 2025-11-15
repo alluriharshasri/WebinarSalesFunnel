@@ -109,7 +109,6 @@ User Registration → Validation → Database Storage → Email Confirmation
 
 **3-Level Campaign**:
 
-
 **Level 0 → Level 1** (10 seconds after registration)
 1. **Wait node** delays execution
 2. **Get row(s) in sheet8** - Fetches current status
@@ -687,5 +686,5 @@ For issues or questions about this workflow:
 ---
 
 **Version**: 1.0  
-**Last Updated**: November 2025  
+**Last Updated**: January 2025  
 **Maintained By**: Webinar Sales Funnel Team
