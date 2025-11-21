@@ -30,7 +30,7 @@
             "password": "={{ $('Registration Form').item.json.body.password }}",
             "nurturing": "L0 - Not Started",
             "client_status": "Processing",
-            "payable_amt": "4999"
+            "payable_amt": "={{ $json.reg_fee }}"
           },
           "matchingColumns": [],
           "schema": [
@@ -233,8 +233,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -1808,
-        -112
+        -1568,
+        -96
       ],
       "id": "f26fdb07-06d6-45c5-be18-f30b488c81aa",
       "name": "Append row in sheet",
@@ -479,8 +479,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -2224,
-        512
+        -2288,
+        528
       ],
       "id": "aacba649-3f31-427b-8d04-53b3c3062619",
       "name": "Append or update row in sheet",
@@ -520,8 +520,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -1968,
-        512
+        -2032,
+        528
       ],
       "id": "57c6c10c-b4a4-4a57-bcec-f221a70ba5c1",
       "name": "Get row(s) in sheet",
@@ -542,8 +542,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -2464,
-        0
+        -2576,
+        16
       ],
       "id": "d2ca81cf-bfd8-4c5d-b124-72e7081f6be0",
       "name": "Registration Form",
@@ -553,7 +553,7 @@
       "parameters": {
         "sendTo": "={{ $json.email }}",
         "subject": "Python Full-Stack 5-day Webinar!",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f4f8fb;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(44,62,80,0.08);\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n\n  </div>\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">Python Full-Stack 5-day Webinar!</h2>\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Congratulations!</strong> 🎉<br>\n    Thank you for showing interest in our <b>5-Day Python Full Stack Development Webinar</b>.\n  </p>\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:22px;\">\n    To complete your registration, please fill out the short form below:\n  </p>\n  <div style=\"text-align:center;margin:28px 0;\">\n    <a href=\"https://your-link.com\" style=\"background:#2563eb;color:#fff;text-decoration:none;padding:14px 36px;border-radius:7px;font-size:17px;display:inline-block;font-weight:600;box-shadow:0 2px 8px rgba(37,99,235,0.10);\">\n      Complete Your Registration & Payment\n    </a>\n  </div>\n  <p style=\"font-size:14px;color:#6b7280;margin-bottom:18px;\">\n    <em>Note: For now, this form includes a simple checkbox to confirm your participation. No payment integration yet — this is just a prototype.</em>\n  </p>\n  <hr style=\"border:none;border-top:1px solid #e5e7eb;margin:28px 0;\">\n  <p style=\"font-size:15px;\">Best regards,<br><span style=\"color:#2563eb;\">The Webinar Team</span></p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f4f8fb;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(44,62,80,0.08);\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n\n  </div>\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">Python Full-Stack 5-day Webinar!</h2>\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Congratulations!</strong> 🎉<br>\n    Thank you for showing interest in our <b>5-Day Python Full Stack Development Webinar</b>.\n  </p>\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:22px;\">\n    To complete your registration, please fill out the short form below:\n  </p>\n  <div style=\"text-align:center;margin:28px 0;\">\n    <a href=\"http://localhost:3000/payment\" style=\"background:#2563eb;color:#fff;text-decoration:none;padding:14px 36px;border-radius:7px;font-size:17px;display:inline-block;font-weight:600;box-shadow:0 2px 8px rgba(37,99,235,0.10);\">\n      Complete Your Registration & Payment\n    </a>\n  </div>\n  <p style=\"font-size:14px;color:#6b7280;margin-bottom:18px;\">\n    <em>Note: For now, this form includes a simple checkbox to confirm your participation. No payment integration yet — this is just a prototype.</em>\n  </p>\n  <hr style=\"border:none;border-top:1px solid #e5e7eb;margin:28px 0;\">\n  <p style=\"font-size:15px;\">Best regards,<br><span style=\"color:#2563eb;\">The Webinar Team</span></p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
         "options": {
           "appendAttribution": false
         }
@@ -562,7 +562,7 @@
       "typeVersion": 2.1,
       "position": [
         -1376,
-        -112
+        -96
       ],
       "id": "d866b280-229e-4cb0-b732-6d0b5aebbd46",
       "name": "Registation Success Mail",
@@ -584,8 +584,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -2496,
-        512
+        -2560,
+        528
       ],
       "id": "8a9d536c-f9d6-4d34-9300-8535eea3d965",
       "name": "Payment Form",
@@ -603,8 +603,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -1376,
-        416
+        -1440,
+        432
       ],
       "id": "6509dd21-7124-40c7-99eb-cbd4a21e58d0",
       "name": "Payment Success Mail",
@@ -620,7 +620,7 @@
       "parameters": {
         "sendTo": "={{ $('Payment Form').item.json.body.email }}",
         "subject": "Webinar - Transaction Failed",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fff5f5;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(255,0,0,0.06);border:1px solid #ffd2d2;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#dc2626;text-align:center;margin-bottom:18px;font-size:1.6em;\">Payment Failed ❌</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Unfortunately, your payment attempt for the <strong>Python Full Stack 5-Day Webinar</strong> was not successful.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    But don’t worry — you can try again to secure your seat!\n  </p>\n\n  <p><strong>Your Payment Details:</strong></p>\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li><b>Name:</b> {{ $json.name || '[undefined]' }}</li>\n    <li><b>Email:</b> {{ $json.email || '[undefined]' }}</li>\n    <li><b>Transaction ID:</b> {{ $json.tnx_id || '[undefined]' }}</li>\n    <li><b>TimeStamp:</b> {{ $json.tnx_timestamp || '[undefined]' }}</li>\n    <li><b>Amount Attempted:</b> {{ $json.payable_amt || '[undefined]' }}</li>\n  </ul>\n\n  <div style=\"text-align:center;margin:28px 0;\">\n    <a href=\"https://your-payment-link.com\"\n      style=\"background:#dc2626;color:#fff;text-decoration:none;padding:14px 36px;border-radius:7px;font-size:17px;display:inline-block;font-weight:600;box-shadow:0 2px 8px rgba(220,38,38,0.15);\">\n      Retry Payment\n    </a>\n  </div>\n\n  <p style=\"font-size:14px;color:#6b7280;margin-bottom:18px;\">\n    If you believe this is a mistake or money has been deducted, please contact support with your Transaction ID.\n  </p>\n\n  <hr style=\"border:none;border-top:1px solid #f1c4c4;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#dc2626;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fff5f5;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(255,0,0,0.06);border:1px solid #ffd2d2;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#dc2626;text-align:center;margin-bottom:18px;font-size:1.6em;\">Payment Failed ❌</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Unfortunately, your payment attempt for the <strong>Python Full Stack 5-Day Webinar</strong> was not successful.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    But don’t worry — you can try again to secure your seat!\n  </p>\n\n  <p><strong>Your Payment Details:</strong></p>\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li><b>Name:</b> {{ $json.name || '[undefined]' }}</li>\n    <li><b>Email:</b> {{ $json.email || '[undefined]' }}</li>\n    <li><b>Transaction ID:</b> {{ $json.txn_id }}</li>\n    <li><b>TimeStamp:</b> {{ $json.txn_timestamp }}</li>\n    <li><b>Amount Attempted:</b> {{ $json.payable_amt }}</li>\n  </ul>\n\n  <!-- Buttons -->\n  <div style=\"text-align:center;margin:28px 0;\">\n\n    <!-- Retry Payment -->\n    <a href=\"http://localhost:3000/payment\"\n      style=\"background:#dc2626;color:#fff;text-decoration:none;\n             padding:12px 26px;border-radius:6px;\n             font-size:15px;display:inline-block;font-weight:600;\n             box-shadow:0 2px 6px rgba(220,38,38,0.15);\n             margin:0 10px;\">\n      Retry Payment\n    </a>\n\n    <!-- Contact Us -->\n    <a href=\"http://localhost:3000/contact\"\n      style=\"background:#ffffff;color:#dc2626;border:1.8px solid #dc2626;\n             text-decoration:none;padding:12px 26px;border-radius:6px;\n             font-size:15px;display:inline-block;font-weight:600;\n             margin:0 10px;\">\n      Contact Us\n    </a>\n\n  </div>\n\n  <p style=\"font-size:14px;color:#6b7280;margin-bottom:18px;\">\n    If you believe this is a mistake or money has been deducted, please contact support with your Transaction ID.\n  </p>\n\n  <hr style=\"border:none;border-top:1px solid #f1c4c4;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#dc2626;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
         "options": {
           "appendAttribution": false
         }
@@ -628,8 +628,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -1152,
-        512
+        -1216,
+        528
       ],
       "id": "2112ebce-2cde-4f08-8e07-82bbaa59deba",
       "name": "Payment Failed Mail",
@@ -669,8 +669,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1376,
-        608
+        -1440,
+        624
       ],
       "id": "f2acb394-eca3-45d1-a3ff-34373ac71458",
       "name": "If1"
@@ -679,7 +679,7 @@
       "parameters": {
         "sendTo": "={{ $('Payment Form').item.json.body.email }}",
         "subject": "We’ve Reserved Your Place – Action Needed to Confirm!",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">⏳ Need Time to Confirm?</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We understand this is an important decision. Your interest has been recorded for the \n    <strong>Python Full Stack Development Webinar</strong>.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Remember to complete your payment before registration ends to:</strong>\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>📚 <strong>Secure your spot</strong> in the course</li>\n    <li>💬 <strong>Get access</strong> to the exclusive WhatsApp community</li>\n    <li>🎥 <strong>Receive all course materials and recordings</strong></li>\n    <li>🏆 <strong>Get your certificate</strong> and mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    <strong>⚠️ Registration closes soon!</strong> Complete your payment before the deadline to confirm your access.\n  </p>\n\n  <p style=\"font-size:15px;line-height:1.6;margin-bottom:22px;\">\n    If you have any questions or need assistance, feel free to reach out to us.\n  </p>\n\n  <!-- Buttons Row -->\n  <div style=\"text-align:center;margin-bottom:22px;\">\n  \n    <!-- Complete Payment Button -->\n    <a href=\"https://your-payment-link.com\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);margin-right:14px;\">\n      Complete Payment\n    </a>\n  \n    <!-- Contact Us Button -->\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#ffffff;color:#d97706;border:1px solid #d97706;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\">\n      Contact Us\n    </a>\n  \n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#d97706;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#222;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">⏳ Need Time to Confirm?</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">Dear <strong>{{ $json.name }}</strong>,</p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We understand this is an important decision. Your interest has been recorded for the \n    <strong>Python Full Stack Development Webinar</strong>.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Remember to complete your payment before registration ends to:</strong>\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>📚 <strong>Secure your spot</strong> in the course</li>\n    <li>💬 <strong>Get access</strong> to the exclusive WhatsApp community</li>\n    <li>🎥 <strong>Receive all course materials and recordings</strong></li>\n    <li>🏆 <strong>Get your certificate</strong> and mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    <strong>⚠️ Registration closes soon!</strong> Complete your payment before the deadline to confirm your access.\n  </p>\n\n  <p style=\"font-size:15px;line-height:1.6;margin-bottom:22px;\">\n    If you have any questions or need assistance, feel free to reach out to us.\n  </p>\n\n  <!-- Buttons Row -->\n  <div style=\"text-align:center;margin-bottom:22px;\">\n  \n    <!-- Complete Payment Button -->\n    <a href=\"http://localhost:3000/payment\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);margin-right:14px;\">\n      Complete Payment\n    </a>\n  \n    <!-- Contact Us Button -->\n    <a href=\"http://localhost:3000/contact\"\n      style=\"background:#ffffff;color:#d97706;border:1px solid #d97706;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\">\n      Contact Us\n    </a>\n  \n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#d97706;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
         "options": {
           "appendAttribution": false
         }
@@ -687,8 +687,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -1152,
-        704
+        -1216,
+        720
       ],
       "id": "e887efc4-b07b-4229-9b5e-c46904cac738",
       "name": "NeedTime Email",
@@ -707,8 +707,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        -432,
-        576
+        -960,
+        -96
       ],
       "id": "5bb67abf-dd54-4930-be21-f4a13b97cd04",
       "name": "Wait",
@@ -742,8 +742,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1664,
-        512
+        -1728,
+        528
       ],
       "id": "542d8107-e481-45f5-9ddd-b0274e449cf8",
       "name": "Check Payment Status"
@@ -784,8 +784,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        128,
-        576
+        -400,
+        -96
       ],
       "id": "5bb28930-28f2-402b-b445-634457e315aa",
       "name": "Check Payment Status-2"
@@ -794,7 +794,7 @@
       "parameters": {
         "sendTo": "={{ $('Registration Form').item.json.body.email }}",
         "subject": "Your Python Full Stack Webinar Spot is Waiting! 🚀",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">🌟 Your Spot is Waiting!</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We noticed you haven’t completed your registration for the \n    <strong>5-Day Python Full Stack Development Webinar</strong> yet.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Here’s why you should complete your registration today:</strong>\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>📚 <strong>Secure your spot</strong> in the webinar</li>\n    <li>💬 <strong>Join our exclusive WhatsApp community</strong> and network with peers</li>\n    <li>🎥 <strong>Access course materials and recordings</strong> after the sessions</li>\n    <li>🏆 <strong>Earn your certificate</strong> and receive a mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    <strong>⚠️ Registration closes soon!</strong> Don’t miss the opportunity to level up your Python Full Stack skills.\n  </p>\n\n  <p style=\"font-size:15px;line-height:1.6;margin-bottom:22px;\">\n    Complete your payment now by clicking the button below:\n  </p>\n\n  <!-- Buttons Row -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:28px;margin-bottom:22px;flex-wrap:wrap;\">\n\n    <!-- Complete Payment Button -->\n    <a href=\"https://your-payment-link.com\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);white-space:nowrap;\">\n      Complete Payment\n    </a>\n\n    <!-- Contact Us Button -->\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#ffffff;color:#d97706;border:1px solid #d97706;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Contact Us\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#d97706;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">🌟 Your Spot is Waiting!</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We noticed you haven’t completed your registration for the \n    <strong>5-Day Python Full Stack Development Webinar</strong> yet.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    <strong>Here’s why you should complete your registration today:</strong>\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>📚 <strong>Secure your spot</strong> in the webinar</li>\n    <li>💬 <strong>Join our exclusive WhatsApp community</strong> and network with peers</li>\n    <li>🎥 <strong>Access course materials and recordings</strong> after the sessions</li>\n    <li>🏆 <strong>Earn your certificate</strong> and receive a mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    <strong>⚠️ Registration closes soon!</strong> Don’t miss the opportunity to level up your Python Full Stack skills.\n  </p>\n\n  <p style=\"font-size:15px;line-height:1.6;margin-bottom:22px;\">\n    Complete your payment now by clicking the button below:\n  </p>\n\n  <!-- Buttons Row -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:28px;margin-bottom:22px;flex-wrap:wrap;\">\n\n    <!-- Complete Payment Button -->\n    <a href=\"http://localhost:3000/payment\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);white-space:nowrap;\">\n      Complete Payment\n    </a>\n\n    <!-- Contact Us Button -->\n    <a href=\"http://localhost:3000/contact\"\n      style=\"background:#ffffff;color:#d97706;border:1px solid #d97706;text-decoration:none;padding:8px 18px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Contact Us\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:28px 0;\">\n\n  <p style=\"font-size:15px;\">Best regards,<br>\n    <span style=\"color:#d97706;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
         "options": {
           "appendAttribution": false
         }
@@ -802,8 +802,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        416,
-        560
+        -112,
+        -112
       ],
       "id": "99968b51-2229-4613-a108-8bb5792a7229",
       "name": "Nurture1",
@@ -823,8 +823,8 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        960,
-        560
+        432,
+        -112
       ],
       "id": "8a3777df-10c5-493b-9da0-32c39e887f18",
       "name": "Wait1",
@@ -834,7 +834,7 @@
       "parameters": {
         "sendTo": "={{ $json.email }}",
         "subject": "=We’ve Reserved Your Spot – Get {{ $json.couponcode_given.replace(/[^0-9]/g,'') }}% Off Now! 🎉",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);border:1px solid #cfe3ff;\">\n\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    🎁 Special Discount Just for You!\n  </h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Code in JavaScript').item.json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Thanks for showing interest in our <strong>5-Day Python Full Stack Development Webinar</strong>!  \n    We truly believe this program can kickstart your developer journey 🚀\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    As a token of appreciation, here’s an <strong>exclusive discount code</strong> crafted specially for you:\n  </p>\n\n  <div style=\"background:#2563eb;color:white;padding:12px 20px;border-radius:8px;text-align:center;font-size:18px;font-weight:700;letter-spacing:1px;margin-bottom:22px;\">\n    {{ $json.couponcode_given }}\n  </div>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Use this coupon during payment to get an instant discount and secure your spot in the training 🎓✨\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    ✅ Learn Python from scratch<br>\n    ✅ Build real-world applications<br>\n    ✅ Get recordings, code, certificate & career guidance  \n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;font-weight:600;color:#1d4ed8;\">\n    Hurry! Limited seats — and this offer is valid only for a short time ⏰🔥\n  </p>\n\n  <!-- Buttons Row -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:26px;margin-bottom:26px;flex-wrap:wrap;\">\n    \n    <!-- Complete Payment Button -->\n    <a href=\"https://your-payment-link.com?email={{ $json.email }}&coupon={{ $json.couponcode_given }}\"\n      style=\"background:#2563eb;color:#fff;text-decoration:none;padding:8px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Apply Coupon & Pay\n    </a>\n\n    <!-- Contact Us Button -->\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#fff;color:#2563eb;border:1px solid #2563eb;text-decoration:none;padding:8px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Need Help?\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Cheers,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);border:1px solid #cfe3ff;\">\n\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    🎁 Special Discount Just for You!\n  </h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Code in JavaScript').item.json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Thanks for showing interest in our <strong>5-Day Python Full Stack Development Webinar</strong>!  \n    We truly believe this program can kickstart your developer journey 🚀\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    As a token of appreciation, here’s an <strong>exclusive discount code</strong> crafted specially for you:\n  </p>\n\n  <!-- Coupon Card -->\n    <div style=\"\n      background: linear-gradient(135deg, #2563eb, #ec4899);\n      padding: 16px 22px;\n      border-radius: 12px;\n      text-align: center;\n      margin-bottom: 22px;\n      box-shadow: 0 4px 14px rgba(0,0,0,0.12);\n      position: relative;\n      color: #ffffff;\n      font-family: Segoe UI, Arial, sans-serif;\n    \">\n    \n      <!-- Coupon Code Text -->\n      <span style=\"\n        font-size: 22px; \n        font-weight: 800; \n        letter-spacing: 1.5px;\n      \">\n        {{ $json.couponcode_given }}\n      </span>\n    \n      <!-- Copy Icon -->\n      <img \n        src=\"https://img.icons8.com/material-rounded/24/ffffff/copy.png\" \n        alt=\"Copy Icon\" \n        style=\"\n          width: 20px;\n          height: 20px;\n          vertical-align: middle;\n          margin-left: 12px;\n          cursor: pointer;\n        \"\n      >\n  \n  <!-- Subtitle -->\n  <div style=\"\n    margin-top: 8px;\n    font-size: 13px;\n    opacity: 0.9;\n    font-weight: 500;\n    letter-spacing: 0.5px;\n  \">\n    Click to copy & apply during payment\n  </div>\n</div>\n\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Use this coupon during payment to get an instant discount and secure your spot in the training 🎓✨\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    ✅ Learn Python from scratch<br>\n    ✅ Build real-world applications<br>\n    ✅ Get recordings, code, certificate & career guidance  \n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;font-weight:600;color:#1d4ed8;\">\n    Hurry! Limited seats - and this offer is valid only for a short time ⏰🔥\n  </p>\n  \n  <!-- Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:26px;margin-bottom:26px;flex-wrap:wrap;\">\n\n    <a href=\"http://localhost:3000/payment?coupon={{ $json.couponcode_given }}\n\"\n      style=\"background:#1d4ed8;color:#fff;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Claim Discount & Complete Payment\n    </a>\n\n    <a href=\"http://localhost:3000/contact\"\n      style=\"background:#ffffff;color:#1d4ed8;border:1px solid #1d4ed8;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Need Help?\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Best Regards,<br>\n    <span style=\"color:#1d4ed8;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Cheers,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n</div>",
         "options": {
           "appendAttribution": false
         }
@@ -891,8 +891,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        1504,
-        560
+        976,
+        -112
       ],
       "id": "10c573f3-50d3-40f3-b541-f0ab41722812",
       "name": "Check Payment Status-3"
@@ -929,31 +929,6 @@
       ],
       "id": "df1bc672-8599-47c0-aa3d-838899abd91b",
       "name": "Check Payment Status-4"
-    },
-    {
-      "parameters": {
-        "sendTo": "={{ $json.email }}",
-        "subject": "⏰Final Call: Secure Your Python Webinar Spot Now!",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(37,99,235,0.12);border:1px solid #cfe3ff;\">\n\n  <!-- Logo -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <!-- Heading -->\n  <h2 style=\"color:#1d4ed8;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    🚨 Final Call: Your Discount Ends Soon!\n  </h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Hi <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    This is your <strong>last chance</strong> to grab your spot in the \n    <strong>5-Day Python Full Stack Development Webinar</strong> with your exclusive discount.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Once this offer closes, the seat & discount will no longer be available.\n  </p>\n\n  <!-- Coupon Box -->\n  <div style=\"background:#1d4ed8;color:white;padding:12px 20px;border-radius:8px;text-align:center;font-size:18px;font-weight:700;letter-spacing:1px;margin-bottom:22px;\">\n    {{ $json.couponcode_given }}\n  </div>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;font-weight:600;color:#1d4ed8;\">\n    Don’t miss this final opportunity to:\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:22px;color:#374151;padding-left:18px;\">\n    <li>📚 Secure your spot in the webinar</li>\n    <li>💬 Join our exclusive WhatsApp community</li>\n    <li>🎥 Access all course materials and recordings</li>\n    <li>🏆 Earn your certificate and mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    After this, the coupon gets deactivated and seats may fill up.  \n    <strong>Act now and don’t miss out!</strong>\n  </p>\n\n  <!-- Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:26px;margin-bottom:26px;flex-wrap:wrap;\">\n\n    <a href=\"https://your-payment-link.com?email={{ $json.email }}&coupon={{ $json.couponcode_given }}\"\n      style=\"background:#1d4ed8;color:#fff;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Claim Discount & Complete Payment\n    </a>\n\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#ffffff;color:#1d4ed8;border:1px solid #1d4ed8;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Need Help?\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Best Regards,<br>\n    <span style=\"color:#1d4ed8;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
-        "options": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 2.1,
-      "position": [
-        -432,
-        1040
-      ],
-      "id": "1afb08b5-e44d-4228-8b00-3cfc2a6faefb",
-      "name": "Urgency Email",
-      "webhookId": "3a46e5a0-342b-4d6e-b12a-5addaa7a4b63",
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "52KHeGZTCkD8VFtm",
-          "name": "Gmail account"
-        }
-      }
     },
     {
       "parameters": {
@@ -1181,8 +1156,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -1152,
-        304
+        -1216,
+        320
       ],
       "id": "8b011ee6-a9f7-48c4-84c5-4ed44e31dfc5",
       "name": "Update Status",
@@ -1247,7 +1222,8 @@
           "mappingMode": "defineBelow",
           "value": {
             "email": "={{ $json.email }}",
-            "nurturing": "CL - No Response"
+            "nurturing": "CL - No Response",
+            "client_status": ""
           },
           "matchingColumns": [
             "email"
@@ -1482,7 +1458,7 @@
       "parameters": {
         "sendTo": "={{ $json.email }}",
         "subject": "Do you want to continue your registration?",
-        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">🔥 Ready to Become a Python Full-Stack Developer?</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We noticed you're exploring our <strong>5-Day Python Full Stack Development Webinar</strong> — great choice!  \n    This program is built to give you <b>real-world developer skills</b>, even if you're just starting out.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Here’s what makes this training different:\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>✅ Learn Python + Backend + Database + Frontend basics</li>\n    <li>🤝 Live mentorship from real industry developers</li>\n    <li>🧠 Hands-on exercises + real-time guidance</li>\n    <li>🎥 Lifetime access to session recordings</li>\n    <li>📂 Source code + resources included</li>\n    <li>💡 Beginner-friendly + career-focused approach</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our goal is simple:  \n    <strong>Turn you into a confident developer who can build real applications.</strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    If this sounds exciting, just click below to confirm you're interested —  \n    and we’ll send you a reminder before seats close.\n  </p>\n\n  <!--Button -->\n  <div style=\"text-align:center;margin-bottom:26px;\">\n    <a href=\"https://webinarsalesfunnel.app.n8n.cloud/webhook-test/interest?email={{ $json.email }}&name={{ $json.name }}\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:15px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);\">\n      Save my Spot!\n    </a>\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Cheers,<br>\n    <span style=\"color:#d97706;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#fffaf3;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(255,159,10,0.08);border:1px solid #ffe2b5;\">\n\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <h2 style=\"color:#d97706;text-align:center;margin-bottom:18px;font-size:1.6em;\">🔥 Ready to Become a Python Full-Stack Developer?</h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    We noticed you're exploring our <strong>5-Day Python Full Stack Development Webinar</strong> — great choice!  \n    This program is built to give you <b>real-world developer skills</b>, even if you're just starting out.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    Here’s what makes this training different:\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:18px;color:#444;\">\n    <li>✅ Learn Python + Backend + Database + Frontend basics</li>\n    <li>🤝 Live mentorship from real industry developers</li>\n    <li>🧠 Hands-on exercises + real-time guidance</li>\n    <li>🎥 Lifetime access to session recordings</li>\n    <li>📂 Source code + resources included</li>\n    <li>💡 Beginner-friendly + career-focused approach</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our goal is simple:  \n    <strong>Turn you into a confident developer who can build real applications.</strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    If this sounds exciting, just click below to confirm you're interested —  \n    and we’ll send you a reminder before seats close.\n  </p>\n\n  <!--Button -->\n  <div style=\"text-align:center;margin-bottom:26px;\">\n    <a href=\"https://webinarsalesfunnel.app.n8n.cloud/webhook/interest?email={{ $json.email }}&name={{ $json.name }}\"\n      style=\"background:#d97706;color:#fff;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:15px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(217,119,6,0.15);\">\n      Save my Spot!\n    </a>\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #ffd79a;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Cheers,<br>\n    <span style=\"color:#d97706;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
         "options": {
           "appendAttribution": false
         }
@@ -1490,8 +1466,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        1808,
-        544
+        1280,
+        -128
       ],
       "id": "557d0e63-9a9a-4ea8-9936-395fd2220194",
       "name": "Send a message",
@@ -1745,8 +1721,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        688,
-        560
+        160,
+        -112
       ],
       "id": "bdc51c19-7e9b-48e2-bc0c-c8e85ef18649",
       "name": "Append or update row in sheet3",
@@ -2078,8 +2054,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -2256,
-        0
+        -2384,
+        16
       ],
       "id": "2ad47c98-e7b5-417f-a5ae-b7bd12180454",
       "name": "Get row(s) in sheet2",
@@ -2119,8 +2095,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -2048,
-        0
+        -2192,
+        16
       ],
       "id": "39eb4c88-8203-4be2-8e8c-c1e376b6fa01",
       "name": "New Registration?"
@@ -2220,7 +2196,7 @@
     {
       "parameters": {
         "respondWith": "json",
-        "responseBody": "={\n  \"success\": true,\n  \"discount\": {{ $json.discount_amt }},\n  \"message\": \"{{ $json.discount_percentage }}% discount applied successfully!\"\n}",
+        "responseBody": "={\n  \"success\": true,\n  \"discount_percentage\": {{ $json.discount_percentage }},\n  \"message\": \"{{ $json.discount_percentage }}% discount applied successfully!\"\n}",
         "options": {}
       },
       "type": "n8n-nodes-base.respondToWebhook",
@@ -2255,7 +2231,8 @@
             "email": "={{ $('If2').item.json.email }}",
             "discount_percentage": "={{ $json.new_discount_percentage }}",
             "discount_amt": "={{ $json.new_discount_amt }}",
-            "payable_amt": "={{ $json.new_payable_amt }}"
+            "payable_amt": "={{ $json.new_payable_amt }}",
+            "couponcode_applied": "={{ $('Coupon Validation').item.json.body.couponcode_applied }}"
           },
           "matchingColumns": [
             "email"
@@ -2474,7 +2451,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const items = $input.all();\n\nconst updatedItems = items.map((item) => {\n  const coupon = item.json.couponcode_given || \"\";\n\n  // Extract numbers from coupon string (ex: STUDENT30 -> 30 , PY05 -> 05)\n  const new_discount_percentage = Number(coupon.replace(/[^0-9]/g, \"\")) || 0;\n\n  // Calculate new discount\n  const new_discount_amt = (item.json.payable_amt * new_discount_percentage) / 100;\n\n  // New payable amount\n  const new_payable_amt = item.json.payable_amt - new_discount_amt;\n\n  // Return only these values - you will store them later in DB\n  return {\n    json: {\n      new_discount_percentage,\n      new_discount_amt,\n      new_payable_amt\n    }\n  };\n});\n\nreturn updatedItems;"
+        "jsCode": "const items = $input.all();\n\nconst updatedItems = items.map((item) => {\n  const coupon = item.json.couponcode_given || \"\";\n\n  // Extract numbers from coupon string (ex: STUDENT30 -> 30 , PY05 -> 05)\n  const new_discount_percentage = Number(coupon.replace(/[^0-9]/g, \"\")) || 0;\n  const regFee = Number($('Coupon Validation').first().json.body.registrationFee);\n  \n  // Calculate new discount\n  const new_discount_amt = (regFee * new_discount_percentage) / 100;\n\n  // New payable amount\n  const new_payable_amt = regFee - new_discount_amt;\n\n  // Return only these values - you will store them later in DB\n  return {\n    json: {\n      new_discount_percentage,\n      new_discount_amt,\n      new_payable_amt\n    }\n  };\n});\n\nreturn updatedItems;"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -2512,8 +2489,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -2496,
-        2672
+        -2528,
+        2688
       ],
       "id": "fffcdf2b-d3de-4849-93f5-8942cf411926",
       "name": "Admin",
@@ -2532,13 +2509,13 @@
           "__rl": true,
           "value": 1904087004,
           "mode": "list",
-          "cachedResultName": "AdminLogs",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UinuM281y4r8gxCrCr2dvF_-7CBC2l_FVSomj0Ia-c8/edit#gid=1904087004"
+          "cachedResultName": "Admin",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=1904087004"
         },
         "filtersUI": {
           "values": [
             {
-              "lookupColumn": "Username",
+              "lookupColumn": "admin_username",
               "lookupValue": "={{ $json.body.username }}"
             }
           ]
@@ -2548,8 +2525,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -2288,
-        2672
+        -2320,
+        2688
       ],
       "id": "66e56e3e-d0dd-4fff-964e-4bb5777a6ef9",
       "name": "Get row(s) in sheet4",
@@ -2572,8 +2549,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -1568,
-        2576
+        -1600,
+        2592
       ],
       "id": "319b737d-88b8-44b7-9d4b-edaeac889de4",
       "name": "Respond to Webhook3"
@@ -2587,8 +2564,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -1568,
-        2784
+        -1600,
+        2800
       ],
       "id": "bcaf632e-c3d6-4d61-970a-1ea1641b8276",
       "name": "Respond to Webhook4"
@@ -2765,8 +2742,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -2080,
-        2672
+        -2112,
+        2688
       ],
       "id": "02b3b2e2-ebda-4fc3-a9df-e360c8f03320",
       "name": "Check Username",
@@ -2785,7 +2762,7 @@
             {
               "id": "21d4d8af-553f-4c29-b8a6-b33124ec9bc3",
               "leftValue": "={{ $('Admin').item.json.body.password }}",
-              "rightValue": "={{ $json.Password }}",
+              "rightValue": "={{ $('Get row(s) in sheet4').item.json.admin_password }}",
               "operator": {
                 "type": "string",
                 "operation": "equals",
@@ -2800,8 +2777,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -1824,
-        2656
+        -1856,
+        2672
       ],
       "id": "933ec01f-a40c-426d-bf57-0a437ba29b3e",
       "name": "Validate Credentials",
@@ -2850,26 +2827,11 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -1840,
+        -1872,
         96
       ],
       "id": "cc7eb25f-88a9-46cc-97a8-ee4016668b94",
       "name": "Respond to Webhook6"
-    },
-    {
-      "parameters": {
-        "respondWith": "json",
-        "responseBody": "{\n  \"success\": true,\n  \"message\": \"Lead captured successfully\"\n  \n}",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.respondToWebhook",
-      "typeVersion": 1.4,
-      "position": [
-        -1600,
-        -112
-      ],
-      "id": "3e8caefc-4deb-4933-96df-616c02c36873",
-      "name": "Respond to Webhook7"
     },
     {
       "parameters": {
@@ -2881,8 +2843,8 @@
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
       "position": [
-        -608,
-        0
+        -416,
+        528
       ],
       "id": "d9bc502e-0a35-44d4-9783-38b79f86b492",
       "name": "Login",
@@ -2917,8 +2879,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -400,
-        0
+        -208,
+        528
       ],
       "id": "9927f8f0-2436-4efc-91f0-29da5dad62d1",
       "name": "Get row(s) in sheet7",
@@ -2958,8 +2920,8 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        -176,
-        0
+        16,
+        528
       ],
       "id": "b3e78da5-f8ea-4a71-aaa3-25b5fa69883d",
       "name": "Registered?"
@@ -2973,8 +2935,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        32,
-        -96
+        224,
+        432
       ],
       "id": "e506d0d0-1252-40bb-89f4-daa947ac3d5f",
       "name": "Respond to Webhook8"
@@ -2988,8 +2950,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        32,
-        96
+        224,
+        624
       ],
       "id": "ec353191-754a-4d40-89de-bf4279ba7c8a",
       "name": "Respond to Webhook9"
@@ -3024,8 +2986,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -144,
-        576
+        -672,
+        -96
       ],
       "id": "cc650b92-e439-4427-aa66-e49b018622f1",
       "name": "Get row(s) in sheet8",
@@ -3065,8 +3027,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        1232,
-        560
+        704,
+        -112
       ],
       "id": "52801831-43a3-4003-839e-668c7d416ba4",
       "name": "Get row(s) in sheet9",
@@ -3287,8 +3249,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        2064,
-        544
+        1536,
+        -128
       ],
       "id": "946a13c0-9c00-4e59-9433-99fc547383bb",
       "name": "Append or update row in sheet4",
@@ -3308,8 +3270,8 @@
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -928,
-        512
+        -992,
+        528
       ],
       "id": "1ac28310-6657-42db-a428-1fb4046c6b1c",
       "name": "Respond to Webhook10"
@@ -3883,12 +3845,12 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "name": "={{ $('ContactForm').item.json.body.name }}",
-            "email": "={{ $('ContactForm').item.json.body.email }}",
-            "mobile": "={{ $('ContactForm').item.json.body.mobile }}",
+            "name": "={{ $('ContactForm').first().json.body.name }}",
+            "email": "={{ $('ContactForm').first().json.body.email }}",
+            "mobile": "={{ $('ContactForm').first().json.body.mobile }}",
             "ticket_id": "={{ $json.ticketId }}",
-            "query_timestamp": "={{ $('ContactForm').item.json.body.query_timestamp }}",
-            "query": "={{ $('ContactForm').item.json.body.query }}",
+            "query_timestamp": "={{ $('ContactForm').first().json.body.query_timestamp }}",
+            "query": "={{ $('ContactForm').first().json.body.query }}",
             "query_status": "Open"
           },
           "matchingColumns": [],
@@ -3964,6 +3926,16 @@
               "removed": false
             },
             {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
               "id": "query_timestamp",
               "displayName": "query_timestamp",
               "required": false,
@@ -4017,14 +3989,14 @@
     {
       "parameters": {
         "respondWith": "json",
-        "responseBody": "{\n  \"payment_status\": \"Failure\"\n}",
+        "responseBody": "{\n  \"payment_status\": \"Need Time\"\n}",
         "options": {}
       },
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.4,
       "position": [
-        -928,
-        704
+        -992,
+        720
       ],
       "id": "967faa20-5e9c-47f0-911f-a95af0927289",
       "name": "Respond to Webhook11"
@@ -4147,7 +4119,7 @@
         "messages": {
           "values": [
             {
-              "content": "=You are an AI support assistant for a Webinar Sales Funnel system.\n\nYour task:\n1. Analyze the user's query carefully.\n2. Determine which category it belongs to from the list below.\n3. Output your result as a valid JSON object with only two keys: \n   - \"category\"\n   - \"response\"\n4. Do not include any explanations, markdown, or extra text outside the JSON.\n\n---\n\nCATEGORIES AND RESPONSES:\n\n1. Webinar Date → \n   \"The webinar is scheduled on 15th Nov 2025. You’ll receive a reminder email 24 hours before it starts.\"\n\n2. Rescheduling → \n   \"We’re sorry, but rescheduling isn’t possible as this is a one-time webinar. We hope you can join us for the scheduled session!\"\n\n3. Refund → \n   \"Please note that refunds are typically processed within 3–5 working days after approval. As refunds are not generally provided, could you please share your reason for requesting one along with your registered email ID so we can review your case?\"\n\n4. Registration / Link Issues → \n   \"You can find your webinar link in the confirmation email. If you still don’t have it, please share your registered email ID so we can resend it.\"\n\n5. Technical / Login Problems → \n   \"Please try joining via a stable network or use another browser. If the issue continues, we’ll report it to the tech team.\"\n\n6. Other → \n   \"Your query requires additional verification. I’m passing it along to our admin team to review and assist you further.\"\n\nIf the query is **not related to the webinar**, output this instead:\n- category: \"Not Related to Webinar\"\n- response: \"This query is not related to the webinar. I can only assist with webinar-related queries.\"\n\n---\n\nRules:\n- Output valid JSON only.\n- Use one of the exact category names listed above.\n- No extra text, markdown, or explanations outside the JSON.\n\n---\n\nUser Query:\n{{ $json.query }}\n\nOutput:\n"
+              "content": "=You are an AI support assistant for a Webinar Sales Funnel system.\n\nYour task:\n1. Analyze the user's query carefully.\n2. Determine which category it belongs to from the list below.\n3. Output your result as a valid JSON object with only two keys: \n   - \"category\"\n   - \"response\"\n4. Do not include any explanations, markdown, or extra text outside the JSON.\n\n---\n\nCATEGORIES AND RESPONSES:\n\n1. Webinar Schedule → \n   For this category, generate a **natural, context-aware support response** using the webinar details below.  \n   You must respond like a real support agent based on the user's query.\n\n   Webinar Details:\n\n   - Registration Deadline: {{ $json.reg_deadline}}\n   - Webinar Date: {{ $json.webinar_date}}\n   - Webinar Time: {{ $json.webinar_time}}\n\n   Your response should directly address the query and include relevant details from the above information only if needed.\n\n\n2. Rescheduling → \n   \"We’re sorry, but rescheduling isn’t possible as this is a one-time webinar. We hope you can join us for the scheduled session!\"\n\n3. Refund → \n   \"Please note that refunds are typically processed within 3–5 working days after approval. As refunds are not generally provided, could you please share your reason for requesting one along with your registered email ID so we can review your case?\"\n\n4. Registration / Link Issues → \n   \"You can find your webinar link in the confirmation email. If you still don’t have it, please share your registered email ID so we can resend it.\"\n\n5. Technical / Login Problems → \n   \"Please try joining via a stable network or use another browser. If the issue continues, we’ll report it to the tech team.\"\n\n6. Other → \n   For this category, generate a **natural, context-aware support response** using the webinar details below.  \n   You must respond like a real support agent based on the user's query.\n\n   Webinar Details:\n   - Registration Fee: {{ $json.reg_fee}}\n   - Contact Email: {{ $json.contact_email}}\n   - WhatsApp Invite: {{ $json.whatsapp_invite}}\n   - Discord Link: {{ $json.discord_link}}\n\n   Your response should directly address the query and include relevant details from the above information only if needed.\n\nIf the query is **not related to the webinar**, output this instead:\n- category: \"Not Related to Webinar\"\n- response: \"This query is not related to the webinar. I can only assist with webinar-related queries.\"\n\n---\n\nRules:\n- Output valid JSON only.\n- Use one of the exact category names listed above.\n- No extra text, markdown, or explanations outside the JSON.\n\n---\n\nUser Query:\n{{ $json.query }}\n\nOutput:\n"
             }
           ]
         },
@@ -4157,7 +4129,7 @@
       "type": "@n8n/n8n-nodes-langchain.googleGemini",
       "typeVersion": 1,
       "position": [
-        -1248,
+        -1072,
         2016
       ],
       "id": "bf6fe74b-1069-446c-85a2-99743dbe23cc",
@@ -4191,7 +4163,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        -896,
+        -688,
         2016
       ],
       "id": "1b4e47cd-2a32-4fa9-a062-1d1c243f0759",
@@ -4201,7 +4173,7 @@
       "parameters": {
         "sendTo": "={{ $('Append row in sheet1').item.json.email }}",
         "subject": "Query Resolution.",
-        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Query Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    {{ $json.response }}\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Support Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:24px;flex-wrap:wrap;\">\n    \n    <a href=\"mailto:webinar-support@pystack.com\"\n      style=\"background:#2563eb;color:#fff;text-decoration:none;padding:10px 20px;border-radius:6px;\n      font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Reply to Support\n    </a>\n\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#fff;color:#2563eb;border:1px solid #2563eb;text-decoration:none;\n      padding:10px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\n      white-space:nowrap;\">\n      Visit Help Center\n    </a>\n\n  </div>\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Query Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    {{ $json.response }}\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
         "options": {
           "appendAttribution": false
         }
@@ -4209,8 +4181,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -624,
-        2016
+        -256,
+        2128
       ],
       "id": "43e3d9c0-20da-4183-8a77-a26b4454e83b",
       "name": "Send a message1",
@@ -4224,49 +4196,15 @@
     },
     {
       "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          },
-          "conditions": [
-            {
-              "id": "ba21f78d-d6c4-4557-b7db-ceac25620747",
-              "leftValue": "={{ $('Code in JavaScript1').item.json.category }}",
-              "rightValue": "Other",
-              "operator": {
-                "type": "string",
-                "operation": "equals"
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2,
-      "position": [
-        -160,
-        2016
-      ],
-      "id": "4ac66566-b207-4132-8c07-0a67ab018cdb",
-      "name": "Other Category?"
-    },
-    {
-      "parameters": {
         "content": "## Login Validation \n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
         "height": 448,
-        "width": 912,
-        "color": 2
+        "width": 912
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -672,
-        -208
+        -480,
+        320
       ],
       "id": "3a32ab58-93e7-477d-bb5a-e6f1f08f3b48",
       "name": "Sticky Note"
@@ -4281,8 +4219,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -560,
-        464
+        -1072,
+        -208
       ],
       "id": "e88aa6e3-e46b-4132-8f51-e588ab540c7a",
       "name": "Sticky Note1"
@@ -4291,14 +4229,14 @@
       "parameters": {
         "content": "## Registration \n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
         "height": 416,
-        "width": 1312,
+        "width": 1424,
         "color": 2
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2528,
-        -192
+        -2640,
+        -176
       ],
       "id": "dcf6b757-d6d7-4523-afcc-8059d28ce2e5",
       "name": "Sticky Note2"
@@ -4307,13 +4245,14 @@
       "parameters": {
         "content": "## Payment Manager \n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
         "height": 576,
-        "width": 1840
+        "width": 1840,
+        "color": 6
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2576,
-        288
+        -2640,
+        304
       ],
       "id": "612be2bd-da90-4256-aaef-698ac97930d7",
       "name": "Sticky Note3"
@@ -4368,8 +4307,8 @@
     {
       "parameters": {
         "content": "## Query Form\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
-        "height": 656,
-        "width": 3744,
+        "height": 672,
+        "width": 3488,
         "color": 2
       },
       "type": "n8n-nodes-base.stickyNote",
@@ -4391,8 +4330,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -2608,
-        2560
+        -2640,
+        2576
       ],
       "id": "d0c1bf8f-dc2c-404e-a7a6-15701336aea1",
       "name": "Sticky Note8"
@@ -4420,8 +4359,9 @@
             "email": "={{ $('Append row in sheet1').item.json.email }}",
             "query_category": "={{ $('Code in JavaScript1').item.json.category }}",
             "query_reply": "={{ $('Code in JavaScript1').item.json.response }}",
-            "query_status": "",
-            "query_resolved_timestamp": "={{ $('Code in JavaScript1').item.json.timestamp }}"
+            "query_resolved_timestamp": "={{ $('Code in JavaScript1').item.json.timestamp }}",
+            "query_resolved_by": "",
+            "query_status": "AI Processed"
           },
           "matchingColumns": [
             "email"
@@ -4493,6 +4433,16 @@
               "canBeUsedToMatch": true
             },
             {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
               "id": "query_timestamp",
               "displayName": "query_timestamp",
               "required": false,
@@ -4528,289 +4478,11 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        -368,
-        2016
+        -16,
+        2128
       ],
       "id": "a3f86faf-08e1-4ee4-925f-85447a05800a",
       "name": "Append or update row in sheet6",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "PvhG45vxK3vGjUAj",
-          "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "appendOrUpdate",
-        "documentId": {
-          "__rl": true,
-          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
-          "mode": "list",
-          "cachedResultName": "WebinarSalesFunnel_DB",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 2082547918,
-          "mode": "list",
-          "cachedResultName": "Queries",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "email": "={{ $('Append or update row in sheet6').item.json.email }}",
-            "query_status": "Answered"
-          },
-          "matchingColumns": [
-            "email"
-          ],
-          "schema": [
-            {
-              "id": "name",
-              "displayName": "name",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "displayName": "email",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "mobile",
-              "displayName": "mobile",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ticket_id",
-              "displayName": "ticket_id",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query",
-              "displayName": "query",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_category",
-              "displayName": "query_category",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_reply",
-              "displayName": "query_reply",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_timestamp",
-              "displayName": "query_timestamp",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_resolved_timestamp",
-              "displayName": "query_resolved_timestamp",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_status",
-              "displayName": "query_status",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        64,
-        2128
-      ],
-      "id": "7af7aa87-bd15-4cf4-b554-0f553d1cf769",
-      "name": "Append or update row in sheet8",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "PvhG45vxK3vGjUAj",
-          "name": "Google Sheets account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "operation": "appendOrUpdate",
-        "documentId": {
-          "__rl": true,
-          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
-          "mode": "list",
-          "cachedResultName": "WebinarSalesFunnel_DB",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 2082547918,
-          "mode": "list",
-          "cachedResultName": "Queries",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "email": "={{ $('Append or update row in sheet6').item.json.email }}",
-            "query_status": "Pending_admin"
-          },
-          "matchingColumns": [
-            "email"
-          ],
-          "schema": [
-            {
-              "id": "name",
-              "displayName": "name",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "email",
-              "displayName": "email",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "mobile",
-              "displayName": "mobile",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "ticket_id",
-              "displayName": "ticket_id",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query",
-              "displayName": "query",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_category",
-              "displayName": "query_category",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_reply",
-              "displayName": "query_reply",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_timestamp",
-              "displayName": "query_timestamp",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_resolved_timestamp",
-              "displayName": "query_resolved_timestamp",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "query_status",
-              "displayName": "query_status",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.7,
-      "position": [
-        64,
-        1920
-      ],
-      "id": "bbf0e9da-13b0-4365-a2da-94a9e8e1de6c",
-      "name": "Append or update row in sheet9",
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "PvhG45vxK3vGjUAj",
@@ -4825,7 +4497,7 @@
       "type": "n8n-nodes-base.wait",
       "typeVersion": 1.1,
       "position": [
-        272,
+        208,
         2128
       ],
       "id": "e244af6e-67d1-463e-8e8e-e8efad3aac1d",
@@ -4870,13 +4542,15 @@
       "parameters": {
         "sendTo": "={{ $('Get row(s) in sheet5').item.json.email }}",
         "subject": "TickedID Closed!",
-        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope you're doing well. Since we did not receive any response from you within the given time\n    and we had already shared a resolution for your query, your support ticket has now been \n    <strong>closed</strong>.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    If you still feel that your issue needs further attention or you are not fully satisfied with the \n    resolution provided, you are welcome to <strong>raise a new ticket</strong> regarding the same matter.  \n    We are always here to help you — our team is dedicated to solving your problems and ensuring that \n    you have a smooth and supportive experience with us.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for being with us and giving us the opportunity to assist you. We truly appreciate your \n    time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Support Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:24px;flex-wrap:wrap;\">\n    \n    <a href=\"mailto:webinar-support@pystack.com\"\n      style=\"background:#2563eb;color:#fff;text-decoration:none;padding:10px 20px;border-radius:6px;\n      font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Reply to Support\n    </a>\n\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#fff;color:#2563eb;border:1px solid #2563eb;text-decoration:none;\n      padding:10px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\n      white-space:nowrap;\">\n      Visit Help Center\n    </a>\n\n  </div>\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
-        "options": {}
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope you're doing well. Since we did not receive any response from you within the given time\n    and we had already shared a resolution for your query, your support ticket has now been \n    <strong>closed</strong>.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    If you still feel that your issue needs further attention or you are not fully satisfied with the \n    resolution provided, you are welcome to <strong>raise a new ticket</strong> regarding the same matter.  \n    We are always here to help you — our team is dedicated to solving your problems and ensuring that \n    you have a smooth and supportive experience with us.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for being with us and giving us the opportunity to assist you. We truly appreciate your \n    time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -896,
+        -848,
         2192
       ],
       "id": "584ff181-a71b-4907-99ed-7f0bf413a20c",
@@ -4893,13 +4567,15 @@
       "parameters": {
         "sendTo": "={{ $('Get row(s) in sheet5').item.json.email }}",
         "subject": "Query Update!",
-        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Escalation Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for reaching out to us and sharing your concern. We truly appreciate your patience.  \n    As we have already provided a response to your query and understand that you are still not fully \n    satisfied with the resolution, we want to ensure your issue gets the attention it deserves.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    To help you further, we have <strong>escalated your ticket to our Admin Team</strong>.  \n    They will carefully review your case and provide you with additional assistance to fully resolve \n    your issue. You can expect them to contact you shortly with the next steps.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our goal is always to support you in the best possible way, and we are committed to ensuring your \n    concerns are addressed thoroughly. Thank you once again for your cooperation, patience, and trust \n    in our support team — we’re here to help you every step of the way.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Support Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:24px;flex-wrap:wrap;\">\n    \n    <a href=\"mailto:webinar-support@pystack.com\"\n      style=\"background:#2563eb;color:#fff;text-decoration:none;padding:10px 20px;border-radius:6px;\n      font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Reply to Support\n    </a>\n\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#fff;color:#2563eb;border:1px solid #2563eb;text-decoration:none;\n      padding:10px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\n      white-space:nowrap;\">\n      Visit Help Center\n    </a>\n\n  </div>\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Warm Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
-        "options": {}
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Escalation Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Get row(s) in sheet5').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body (AI Response) -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for reaching out to us and sharing your concern. We truly appreciate your patience.  \n    As we have already provided a response to your query and understand that you are still not fully \n    satisfied with the resolution, we want to ensure your issue gets the attention it deserves.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    To help you further, we have <strong>escalated your ticket to our Admin Team</strong>.  \n    They will carefully review your case and provide you with additional assistance to fully resolve \n    your issue. You can expect them to contact you shortly with the next steps.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our goal is always to support you in the best possible way, and we are committed to ensuring your \n    concerns are addressed thoroughly. Thank you once again for your cooperation, patience, and trust \n    in our support team — we’re here to help you every step of the way.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Warm Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        -896,
+        -848,
         2368
       ],
       "id": "bd69f64a-6fe5-4bd2-ace5-2f0dc4be1087",
@@ -4933,7 +4609,8 @@
           "mappingMode": "defineBelow",
           "value": {
             "query_status": "Closed",
-            "ticket_id": "={{ $('Append row in sheet1').item.json.ticket_id }}"
+            "ticket_id": "={{ $('Append row in sheet1').item.json.ticket_id }}",
+            "query_resolved_by": "AI"
           },
           "matchingColumns": [
             "ticket_id"
@@ -5004,6 +4681,16 @@
               "canBeUsedToMatch": true
             },
             {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
               "id": "query_timestamp",
               "displayName": "query_timestamp",
               "required": false,
@@ -5039,7 +4726,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        480,
+        432,
         2128
       ],
       "id": "2d43bd02-6aad-43cc-a75a-040e0548f825",
@@ -5053,20 +4740,1191 @@
     },
     {
       "parameters": {
-        "sendTo": "={{ $('Append or update row in sheet8').item.json.email }}",
+        "sendTo": "={{ $('Tckt Expiring').item.json.email }}",
         "subject": "Query Resolved!",
-        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope your query has been successfully resolved. Since we haven't heard back from you after we shared \n    the response to your query, we are assuming that everything is now working fine on your end.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Therefore, we are closing your support ticket with the following Ticket ID: {{ $('Append row in sheet1').item.json.ticket_id }}<br>\n    <strong style=\"color:#2563eb;font-size:17px;\"></strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you so much for being with us and allowing us the opportunity to assist you.  \n    We sincerely appreciate your time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Support Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:20px;margin-bottom:24px;flex-wrap:wrap;\">\n    \n    <a href=\"mailto:webinar-support@pystack.com\"\n      style=\"background:#2563eb;color:#fff;text-decoration:none;padding:10px 20px;border-radius:6px;\n      font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Reply to Support\n    </a>\n\n    <a href=\"https://your-contact-page.com\"\n      style=\"background:#fff;color:#2563eb;border:1px solid #2563eb;text-decoration:none;\n      padding:10px 20px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;\n      white-space:nowrap;\">\n      Visit Help Center\n    </a>\n\n  </div>\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
-        "options": {}
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope your query has been successfully resolved. Since we haven't heard back from you after we shared \n    the response to your query, we are assuming that everything is now working fine on your end.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Therefore, we are closing your support ticket with the following Ticket ID: {{ $('Append row in sheet1').item.json.ticket_id }}<br>\n    <strong style=\"color:#2563eb;font-size:17px;\"></strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you so much for being with us and allowing us the opportunity to assist you.  \n    We sincerely appreciate your time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "options": {
+          "appendAttribution": false
+        }
       },
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.1,
       "position": [
-        688,
+        656,
         2128
       ],
       "id": "b4555601-5c44-43b8-aa78-bbf52ebf6c0e",
       "name": "Send a message4",
       "webhookId": "a64e11fa-0b63-48da-b6ce-7fc067963d16",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "52KHeGZTCkD8VFtm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a907d54c-f6ea-4411-9b30-55e4d06d8ff4",
+              "leftValue": "={{ $json.category }}",
+              "rightValue": "Other",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -480,
+        2016
+      ],
+      "id": "0fc8c7d3-af3b-41ce-abbe-6f7b5a5c5878",
+      "name": "Other Category"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "email": "={{ $('Append row in sheet1').item.json.email }}",
+            "query_category": "={{ $('Code in JavaScript1').item.json.category }}",
+            "query_reply": "=AI Recomendation: {{ $('Code in JavaScript1').item.json.response }}",
+            "query_timestamp": "={{ $('Code in JavaScript1').item.json.timestamp }}",
+            "query_resolved_timestamp": "=",
+            "query_status": "Pending Approval"
+          },
+          "matchingColumns": [
+            "email"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -256,
+        1920
+      ],
+      "id": "23833b66-e080-45ba-9ab1-d1284b80aa91",
+      "name": "Append or update row in sheet11",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "Query Update!",
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Append row in sheet1').item.json.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for reaching out to us. We have reviewed your query, and it appears that it requires further authentication and internal verification.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    To ensure this is handled correctly, we have forwarded your case to our admin team. They will personally review it and get in touch with you shortly with an update or the next steps.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Your support ticket has been logged with the following Ticket ID: <strong>{{ $('Append row in sheet1').item.json.ticket_id }}</strong>.  \n    Please keep this ID handy for any future correspondence.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We appreciate your patience and understanding while we look into this further. Rest assured, our team is working to ensure this gets resolved as soon as possible.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -48,
+        1920
+      ],
+      "id": "7a032ad8-fbdc-4068-a8db-85442ad36132",
+      "name": "Send a message5",
+      "webhookId": "83b214f3-df5c-4eb7-a6fe-c91e7a2d5bc3",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "52KHeGZTCkD8VFtm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"settings\": {\n    \"reg_fee\": \"{{ $json.reg_fee }}\",\n    \"reg_deadline\": \"{{ $json.reg_deadline }}\",\n    \"webinar_date\": \"{{ $json.webinar_date }}\",\n    \"webinar_time\": \"{{ $json.webinar_time }}\",\n    \"contact_email\": \"{{ $json.contact_email }}\",\n    \"whatsapp_invite\": \"{{ $json.whatsapp_invite }}\",\n    \"discord_link\": \"{{ $json.discord_link }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -2128,
+        3088
+      ],
+      "id": "c8f34ab5-e0e4-48f8-a102-98d53ec0ddcf",
+      "name": "Respond to Webhook12"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1904087004,
+          "mode": "list",
+          "cachedResultName": "Admin",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=1904087004"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "admin_username",
+              "lookupValue": "admin"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": false
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -2336,
+        3088
+      ],
+      "id": "7a27f784-4944-4b37-84f2-e9823a1e493b",
+      "name": "Get row(s) in sheet12",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "get-settings",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -2544,
+        3088
+      ],
+      "id": "803753a0-ee4f-4024-bd77-5efb23f7812a",
+      "name": "Get Settings",
+      "webhookId": "4fa2cc43-742b-4f87-a8fd-62875bf5d2dd"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1904087004,
+          "mode": "list",
+          "cachedResultName": "Admin",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=1904087004"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "admin_username": "={{ $json.body.adminUsername }}",
+            "admin_password": "={{ $json.body.adminPassword }}",
+            "reg_fee": "={{ $json.body.registrationFee }}",
+            "reg_deadline": "={{ $json.body.registrationDeadline }}",
+            "contact_email": "={{ $json.body.contactEmail }}",
+            "whatsapp_invite": "={{ $json.body.whatsappLink }}",
+            "discord_link": "={{ $json.body.discordLink }}",
+            "webinar_time": "={{ $json.body.webinarTime }}",
+            "webinar_date": "{{ $json.body.webinarDate }}"
+          },
+          "matchingColumns": [
+            "admin_username"
+          ],
+          "schema": [
+            {
+              "id": "admin_username",
+              "displayName": "admin_username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "admin_password",
+              "displayName": "admin_password",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "reg_fee",
+              "displayName": "reg_fee",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "reg_deadline",
+              "displayName": "reg_deadline",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "webinar_date",
+              "displayName": "webinar_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "webinar_time",
+              "displayName": "webinar_time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "contact_email",
+              "displayName": "contact_email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "whatsapp_invite",
+              "displayName": "whatsapp_invite",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "discord_link",
+              "displayName": "discord_link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1664,
+        3088
+      ],
+      "id": "d41c0a10-eefd-4a79-9b15-59e69eaf94c1",
+      "name": "Append or update row in sheet8",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={\n  \"success\": true,\n  \"message\": \"Settings updated successfully\",\n  \"settings\": {\n    \"admin_username\": \"{{ $json.admin_username }}\",\n    \"reg_fee\": \"{{ $json.reg_fee }}\",\n    \"reg_deadline\": \"{{ $json.reg_deadline }}\",\n    \"webinar_date\": \"{{ $json.webinar_date }}\",\n    \"webinar_time\": \"{{ $json.webinar_time }}\",\n    \"contact_email\": \"{{ $json.contact_email }}\",\n    \"whatsapp_invite\": \"{{ $json.whatsapp_invite }}\",\n    \"discord_link\": \"{{ $json.discord_link }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -1440,
+        3088
+      ],
+      "id": "84a8937b-c95b-4853-a036-f0cb2e47efc4",
+      "name": "Respond to Webhook13"
+    },
+    {
+      "parameters": {
+        "content": "## Get and Set Settings\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
+        "height": 272,
+        "width": 1472,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -2640,
+        2992
+      ],
+      "id": "d28c9531-9914-475c-95eb-5a0b9da99b8c",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $json.body.ticket_id }}",
+            "query_reply": "={{ $json.body.query_reply }}",
+            "query_resolved_by": "=",
+            "query_resolved_timestamp": "={{ $json.body.query_resolved_timestamp }}",
+            "query_status": "={{ $json.body.query_status }}"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -784,
+        2832
+      ],
+      "id": "8529b4fa-6dd6-4fa6-b8d2-7db3e3caaa1f",
+      "name": "Append or update row in sheet9",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $('Get row(s) in sheet5').item.json.ticket_id }}",
+            "query_status": "Pending Approval",
+            "query_reply": "=AI Response: {{ $('Get row(s) in sheet5').item.json.query_reply }}"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -640,
+        2368
+      ],
+      "id": "db14f7af-3263-4032-8b49-ccf09c407ace",
+      "name": "Append or update row in sheet12",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "send-response",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1024,
+        2768
+      ],
+      "id": "e7ba970d-1f5b-487f-9223-483078d7cecb",
+      "name": "Admin Processed",
+      "webhookId": "2b019c8b-0d46-45b0-bb1b-8011596d994f"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Admin Processed').item.json.body.email }}",
+        "subject": "Query Resolution",
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Admin Resolution Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Admin Processed').item.json.body.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you for your patience while we reviewed your concern.  \n    We understand how important it is for you to receive a clear and satisfactory resolution.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Our <strong>Admin Team has thoroughly reviewed your ticket</strong> and carefully evaluated the details of your issue.  \n    After completing the verification and assessment process, they have provided the following response as the best possible resolution for your case:\n  </p>\n\n  <!-- Admin Reply -->\n  <div style=\"background:#eaf2ff;padding:16px;border-radius:10px;border-left:4px solid #2563eb;margin-bottom:22px;\">\n    <p style=\"font-size:16px;line-height:1.6;margin:0;color:#1f2937;\">\n      {{ $('Admin Processed').item.json.body.query_reply }}\n    </p>\n  </div>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope this clarifies your concern and provides the support you were looking for.  \n    If you still have any questions or need further assistance, please feel free to reply —  \n    we are always here to help you.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Warm Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -576,
+        2832
+      ],
+      "id": "00f7ac37-5596-4a85-96c8-a5f84e489127",
+      "name": "Send a message6",
+      "webhookId": "47a5cfd0-cbd2-4a1e-bb11-c922b8bc9f10",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "52KHeGZTCkD8VFtm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Admin Resolution\n**Double click** to edit me. [Guide](https://docs.n8n.io/workflows/sticky-notes/)",
+        "height": 416,
+        "width": 1376,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1136,
+        2592
+      ],
+      "id": "7af95c29-cfb5-4ec3-96d2-b2518baf8e77",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": \"true\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -784,
+        2640
+      ],
+      "id": "4bb7f9ae-1ad5-413f-8b67-0095a27f2bf3",
+      "name": "Respond to Webhook14"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 2082547918,
+          "mode": "list",
+          "cachedResultName": "Queries",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=2082547918"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ticket_id": "={{ $('Append or update row in sheet9').item.json.ticket_id }}",
+            "query_resolved_by": "={{ $('Append or update row in sheet9').item.json.query_resolved_by }}",
+            "query_timestamp": "=",
+            "query_resolved_timestamp": "={{ $('Append or update row in sheet9').item.json.query_resolved_timestamp }}",
+            "query_status": "Closed"
+          },
+          "matchingColumns": [
+            "ticket_id"
+          ],
+          "schema": [
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "mobile",
+              "displayName": "mobile",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ticket_id",
+              "displayName": "ticket_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "query",
+              "displayName": "query",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_category",
+              "displayName": "query_category",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_reply",
+              "displayName": "query_reply",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_by",
+              "displayName": "query_resolved_by",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_timestamp",
+              "displayName": "query_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_resolved_timestamp",
+              "displayName": "query_resolved_timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "query_status",
+              "displayName": "query_status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -160,
+        2832
+      ],
+      "id": "bdbb3521-3a8c-4a1e-9b74-bd8c338e0fd3",
+      "name": "Append or update row in sheet13",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -368,
+        2832
+      ],
+      "id": "99dd311e-62a4-4c48-81bf-cce8b20b53f8",
+      "name": "Wait4",
+      "webhookId": "a3cb2c1d-5ece-4484-ac9a-47ec8ab4c165"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Admin Processed').item.json.body.email }}",
+        "subject": "Query Resolved!",
+        "message": "=<!-- Main Container -->\n<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;\nfont-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(59,130,246,0.12);\nborder:1px solid #cfe3ff;\">\n\n  <!-- Banner -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%;max-width:520px;height:auto;border-radius:10px;margin-bottom:24px;\n     box-shadow:0 2px 8px rgba(0,0,0,0.07);display:block;\">\n  </div>\n\n  <!-- Dynamic Subject -->\n  <h2 style=\"color:#2563eb;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    📩 Ticket Status Update\n  </h2>\n\n  <!-- Greeting -->\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Dear <strong>{{ $('Admin Processed').item.json.body.name }}</strong>,\n  </p>\n\n  <!-- Body -->\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    We hope your query has been successfully resolved. Since we haven't heard back from you after we shared \n    the response to your query, we are assuming that everything is now working fine on your end.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Therefore, we are closing your support ticket with the following Ticket ID: {{ $('Admin Processed').item.json.body.ticket_id }}<br>\n    <strong style=\"color:#2563eb;font-size:17px;\"></strong>\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Thank you so much for being with us and allowing us the opportunity to assist you.  \n    We sincerely appreciate your time and trust in our support team.\n  </p>\n\n  <!-- Divider -->\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:24px 0;\">\n\n  <!-- Closing -->\n  <p style=\"font-size:15px;margin-top:12px;\">\n    Best Regards,<br>\n    <span style=\"color:#2563eb;font-weight:600;\">The Webinar Support Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>\n",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        48,
+        2832
+      ],
+      "id": "a7f79259-2d78-42b5-afdf-16b27fbce8e7",
+      "name": "Send a message7",
+      "webhookId": "705e1710-a55f-4739-b810-08b5afc4926b",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "52KHeGZTCkD8VFtm",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "PUT",
+        "path": "post-settings",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -1872,
+        3088
+      ],
+      "id": "672c4ce2-7893-4779-b0b7-d9682b0ac5ed",
+      "name": "Put Settings",
+      "webhookId": "6137ad4f-7b12-47a9-850c-c32f61221e61"
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"payment_status\": \"Success\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -1008,
+        320
+      ],
+      "id": "7bcfcf64-5340-410b-b738-a154e08ebf8a",
+      "name": "Respond to Webhook15"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1904087004,
+          "mode": "list",
+          "cachedResultName": "Admin",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=1904087004"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "admin_username",
+              "lookupValue": "admin"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1776,
+        -96
+      ],
+      "id": "1a2b8f92-8322-488c-82fb-f2b1e69989d8",
+      "name": "Get row(s) in sheet13",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js",
+          "mode": "list",
+          "cachedResultName": "WebinarSalesFunnel_DB",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1904087004,
+          "mode": "list",
+          "cachedResultName": "Admin",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1MBTt9nmLy82_vgB_xxEHXPPdimpto3T9z84QtRbh4Js/edit#gid=1904087004"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "admin_username",
+              "lookupValue": "admin"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -1296,
+        2016
+      ],
+      "id": "7f242747-3ce0-4bfb-a2a5-94a737907932",
+      "name": "Get row(s) in sheet14",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "PvhG45vxK3vGjUAj",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "{\n  \"success\": true,\n  \"message\": \"Lead captured successfully\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        -1968,
+        -96
+      ],
+      "id": "813943c9-f99c-4d10-a84a-e8db54501868",
+      "name": "Respond to Webhook17"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "⏰Final Call: Secure Your Python Webinar Spot Now!",
+        "message": "=<div style=\"max-width:520px;margin:40px auto;padding:32px 28px;background:#f0f7ff;border-radius:14px;font-family:Segoe UI,Arial,sans-serif;color:#1f2937;box-shadow:0 4px 18px rgba(37,99,235,0.12);border:1px solid #cfe3ff;\">\n\n  <!-- Logo -->\n  <div style=\"text-align:center;\">\n    <img src=\"https://raw.githubusercontent.com/UmeshChandra05/Webinar-Sales-Funnel/main/frontend/public/Pystack_banner.png\" \n     alt=\"Pystack Banner\" \n     style=\"width:100%; max-width:520px; height:auto; border-radius:10px; margin-bottom:24px; box-shadow:0 2px 8px rgba(0,0,0,0.07); display:block;\">\n  </div>\n\n  <!-- Heading -->\n  <h2 style=\"color:#1d4ed8;text-align:center;margin-bottom:18px;font-size:1.6em;\">\n    🚨 Final Call: Your Discount Ends Soon!\n  </h2>\n\n  <p style=\"font-size:17px;line-height:1.6;margin-bottom:18px;\">\n    Hi <strong>{{ $json.name }}</strong>,\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    This is your <strong>last chance</strong> to grab your spot in the \n    <strong>5-Day Python Full Stack Development Webinar</strong> with your exclusive discount.\n  </p>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:20px;\">\n    Once this offer closes, the seat & discount will no longer be available.\n  </p>\n\n  <!-- Coupon Card -->\n    <div style=\"\n      background: linear-gradient(135deg, #2563eb, #ec4899);\n      padding: 16px 22px;\n      border-radius: 12px;\n      text-align: center;\n      margin-bottom: 22px;\n      box-shadow: 0 4px 14px rgba(0,0,0,0.12);\n      position: relative;\n      color: #ffffff;\n      font-family: Segoe UI, Arial, sans-serif;\n    \">\n    \n      <!-- Coupon Code Text -->\n      <span style=\"\n        font-size: 22px; \n        font-weight: 800; \n        letter-spacing: 1.5px;\n      \">\n        {{ $json.couponcode_given }}\n      </span>\n    \n      <!-- Copy Icon -->\n      <img \n        src=\"https://img.icons8.com/material-rounded/24/ffffff/copy.png\" \n        alt=\"Copy Icon\" \n        style=\"\n          width: 20px;\n          height: 20px;\n          vertical-align: middle;\n          margin-left: 12px;\n          cursor: pointer;\n        \"\n      >\n  \n  <!-- Subtitle -->\n  <div style=\"\n    margin-top: 8px;\n    font-size: 13px;\n    opacity: 0.9;\n    font-weight: 500;\n    letter-spacing: 0.5px;\n  \">\n    Click to copy & apply during payment\n  </div>\n</div>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;font-weight:600;color:#1d4ed8;\">\n    Don’t miss this final opportunity to:\n  </p>\n\n  <ul style=\"font-size:15px;line-height:1.6;margin-bottom:22px;color:#374151;padding-left:18px;\">\n    <li>📚 Secure your spot in the webinar</li>\n    <li>💬 Join our exclusive WhatsApp community</li>\n    <li>🎥 Access all course materials and recordings</li>\n    <li>🏆 Earn your certificate and mentorship session</li>\n  </ul>\n\n  <p style=\"font-size:16px;line-height:1.6;margin-bottom:18px;\">\n    After this, the coupon gets deactivated and seats may fill up.  \n    <strong>Act now and don’t miss out!</strong>\n  </p>\n\n  <!-- Buttons -->\n  <div style=\"display:flex;justify-content:center;align-items:center;gap:26px;margin-bottom:26px;flex-wrap:wrap;\">\n\n    <a href=\"http://localhost:3000/payment?coupon={{ $json.couponcode_given }}\n\"\n      style=\"background:#1d4ed8;color:#fff;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;box-shadow:0 2px 6px rgba(37,99,235,0.2);white-space:nowrap;\">\n      Claim Discount & Complete Payment\n    </a>\n\n    <a href=\"http://localhost:3000/contact\"\n      style=\"background:#ffffff;color:#1d4ed8;border:1px solid #1d4ed8;text-decoration:none;padding:10px 22px;border-radius:6px;font-size:14px;display:inline-block;font-weight:600;white-space:nowrap;\">\n      Need Help?\n    </a>\n\n  </div>\n\n  <hr style=\"border:none;border-top:1px solid #d4e3ff;margin:26px 0;\">\n\n  <p style=\"font-size:15px;\">Best Regards,<br>\n    <span style=\"color:#1d4ed8;font-weight:600;\">The Webinar Team</span>\n  </p>\n</div>\n\n<!-- Email Footer -->\n<div style=\"text-align:center;font-size:12px;color:#6b7280;margin-top:22px;line-height:1.5;\">\n\n  <p style=\"margin:6px 0 0 0;\">\n    Visit us: \n    <a href=\"https://your-website.com\" style=\"color:#d97706;text-decoration:none;font-weight:600;\">\n      webinarsalesfunnel.com\n    </a>\n  </p>\n\n  <p style=\"margin:8px 0 0 0;\">\n    You're receiving this email because you showed interest in our \n    <strong>Python Full Stack Webinar</strong> on our website.  \n    If you wish not to receive further emails, you can \n    <a href=\"https://your-unsubscribe-link.com\" \n       style=\"color:#9ca3af;text-decoration:none;font-weight:500;opacity:0.7;\">\n       unsubscribe\n    </a>.\n  </p>\n\n</div>",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        -432,
+        1040
+      ],
+      "id": "1afb08b5-e44d-4228-8b00-3cfc2a6faefb",
+      "name": "Urgency Email",
+      "webhookId": "3a46e5a0-342b-4d6e-b12a-5addaa7a4b63",
       "credentials": {
         "gmailOAuth2": {
           "id": "52KHeGZTCkD8VFtm",
@@ -5081,7 +5939,7 @@
       "main": [
         [
           {
-            "node": "Respond to Webhook7",
+            "node": "Registation Success Mail",
             "type": "main",
             "index": 0
           }
@@ -5278,17 +6136,6 @@
         ]
       ]
     },
-    "Urgency Email": {
-      "main": [
-        [
-          {
-            "node": "Append or update row in sheet7",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Check Payment Status-5": {
       "main": [
         [
@@ -5381,7 +6228,7 @@
       "main": [
         [
           {
-            "node": "Append row in sheet",
+            "node": "Respond to Webhook17",
             "type": "main",
             "index": 0
           }
@@ -5615,17 +6462,6 @@
         ]
       ]
     },
-    "Respond to Webhook7": {
-      "main": [
-        [
-          {
-            "node": "Registation Success Mail",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Login": {
       "main": [
         [
@@ -5814,7 +6650,7 @@
       "main": [
         [
           {
-            "node": "Message a model1",
+            "node": "Get row(s) in sheet14",
             "type": "main",
             "index": 0
           }
@@ -5836,7 +6672,7 @@
       "main": [
         [
           {
-            "node": "Send a message1",
+            "node": "Other Category",
             "type": "main",
             "index": 0
           }
@@ -5854,41 +6690,7 @@
         ]
       ]
     },
-    "Other Category?": {
-      "main": [
-        [
-          {
-            "node": "Append or update row in sheet9",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Append or update row in sheet8",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Append or update row in sheet6": {
-      "main": [
-        [
-          {
-            "node": "Other Category?",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Append or update row in sheet9": {
-      "main": [
-        []
-      ]
-    },
-    "Append or update row in sheet8": {
       "main": [
         [
           {
@@ -5930,7 +6732,13 @@
     },
     "Send a message3": {
       "main": [
-        []
+        [
+          {
+            "node": "Append or update row in sheet12",
+            "type": "main",
+            "index": 0
+          }
+        ]
       ]
     },
     "Append or update row in sheet10": {
@@ -5943,13 +6751,201 @@
           }
         ]
       ]
+    },
+    "Other Category": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet11": {
+      "main": [
+        [
+          {
+            "node": "Send a message5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet12": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Settings": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet8": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Admin Processed": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook14",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet9": {
+      "main": [
+        [
+          {
+            "node": "Send a message6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message6": {
+      "main": [
+        [
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet13": {
+      "main": [
+        [
+          {
+            "node": "Send a message7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Put Settings": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Status": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook15",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet13": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet14": {
+      "main": [
+        [
+          {
+            "node": "Message a model1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Webhook17": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet13",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Urgency Email": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "versionId": "9c5a34b7-d483-4bfe-a65b-b0dfd514cc70",
+  "versionId": "5f4e4c7d-647f-44b2-a57e-00e27d97b0ee",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "9dbeb3cfafb3fa34b80362963ab4e0ff934b90fa5cb184bc15f39cf374ffdc98"

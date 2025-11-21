@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom"
+import { useState, useEffect } from "react"
 import { AuthProvider } from "./contexts/AuthContext"
 import Navigation from "./components/Navigation"
 import AIChatWidget from "./components/AIChatWidget"
@@ -15,11 +16,54 @@ import ContactPage from "./pages/ContactPage"
 import AdminLoginPage from "./pages/AdminLoginPage"
 import AdminDashboard from "./pages/AdminDashboard"
 import AdminSettingsPage from "./pages/AdminSettingsPage"
+import QueryDetailsPage from "./pages/QueryDetailsPage"
 import NotFoundPage from "./pages/NotFoundPage"
+import { getSettings } from "./services/constantsService"
 
 function App() {
   const location = useLocation();
   const isAdminPath = location.pathname.startsWith('/admin');
+  const [settingsLoaded, setSettingsLoaded] = useState(false);
+
+  // Preload settings once at app startup
+  useEffect(() => {
+    const preloadSettings = async () => {
+      try {
+        console.log('🚀 Preloading app settings...');
+        await getSettings();
+        console.log('✅ Settings preloaded successfully');
+        setSettingsLoaded(true);
+      } catch (error) {
+        console.error('❌ Failed to preload settings:', error);
+        // Still allow app to load even if settings fail
+        setSettingsLoaded(true);
+      }
+    };
+    preloadSettings();
+  }, []);
+
+  // Show loading screen while settings are being fetched
+  if (!settingsLoaded) {
+    return (
+      <div style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh',
+        backgroundColor: '#0f0f23',
+        color: '#fff'
+      }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{
+            fontSize: '48px',
+            marginBottom: '16px',
+            animation: 'pulse 1.5s ease-in-out infinite'
+          }}>⚡</div>
+          <p style={{ fontSize: '18px', color: '#9ca3af' }}>Loading application...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <AuthProvider>
@@ -83,6 +127,14 @@ function App() {
               element={
                 <ProtectedRoute requireAdmin={true}>
                   <AdminSettingsPage />
+                </ProtectedRoute>
+              } 
+            />
+            <Route 
+              path="/admin/query-details" 
+              element={
+                <ProtectedRoute requireAdmin={true}>
+                  <QueryDetailsPage />
                 </ProtectedRoute>
               } 
             />

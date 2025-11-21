@@ -36,7 +36,6 @@ const leadController = {
             success: true,
             message: response.data?.message || "Thank you for your message. We will get back to you soon!",
             data: {
-              ticket_id: response.data?.ticket_id || `ticket_${Date.now()}`,
               query_timestamp: contactData.query_timestamp,
             },
           })
@@ -105,15 +104,9 @@ const leadController = {
           // Extract the AI response from n8n
           let aiResponse = null;
           
-          // Try different possible response formats from n8n
+          // n8n returns { response: "string" }
           if (response.data?.response) {
             aiResponse = response.data.response;
-          } else if (response.data?.message) {
-            aiResponse = response.data.message;
-          } else if (response.data?.ai_response) {
-            aiResponse = response.data.ai_response;
-          } else if (response.data?.reply) {
-            aiResponse = response.data.reply;
           } else if (typeof response.data === 'string') {
             aiResponse = response.data;
           } else {
@@ -179,6 +172,92 @@ const leadController = {
         success: false,
         error: "Failed to process AI chat",
         message: process.env.NODE_ENV === "production" ? "Sorry, I'm having trouble right now. Please try again later." : error.message,
+      })
+    }
+  },
+
+  sendQueryResponse: async (req, res) => {
+    try {
+      const { 
+        ticket_id, 
+        name, 
+        email, 
+        mobile, 
+        query, 
+        query_reply, 
+        query_category, 
+        query_status, 
+        query_resolved_by, 
+        query_timestamp, 
+        query_resolved_timestamp 
+      } = req.body
+
+      const responseData = {
+        ticket_id,
+        name: name || "N/A",
+        email,
+        mobile: mobile || "N/A",
+        query: query || "",
+        query_reply,
+        query_category: query_category || "General",
+        query_status: query_status || "Pending Approval",
+        query_resolved_by: query_resolved_by || "Admin",
+        query_timestamp: query_timestamp || new Date().toISOString(),
+        query_resolved_timestamp: query_resolved_timestamp || new Date().toISOString(),
+        type: "query_response",
+        ip_address: req.ip,
+      }
+
+      console.log("📤 Sending query response:", { ticket_id, email })
+
+      // If API_BASE_URL is configured, send to n8n webhook
+      if (API_BASE_URL && API_BASE_URL !== "API_URL") {
+        try {
+          const response = await axios.post(`${API_BASE_URL}/send-response`, responseData, {
+            timeout: 10000,
+            headers: {
+              "Content-Type": "application/json",
+            },
+          })
+          
+          console.log("✅ Query response sent to n8n successfully")
+          
+          // Return response from n8n if available (n8n returns { success: true })
+          return res.status(200).json({
+            success: response.data?.success !== false,
+            message: "Response sent successfully!",
+            data: {
+              ticket_id: responseData.ticket_id,
+              query_resolved_timestamp: responseData.query_resolved_timestamp,
+            },
+          })
+        } catch (apiError) {
+          console.error("❌ Send response n8n API Error:", apiError.message)
+          
+          // Return error if n8n fails
+          return res.status(503).json({
+            success: false,
+            error: "Failed to send response",
+            message: "Response service temporarily unavailable. Please try again later.",
+          })
+        }
+      }
+
+      // Local fallback response (when n8n is not configured)
+      res.status(200).json({
+        success: true,
+        message: "Response sent successfully!",
+        data: {
+          ticket_id: responseData.ticket_id,
+          query_resolved_timestamp: responseData.query_resolved_timestamp,
+        },
+      })
+    } catch (error) {
+      console.error("❌ Send response error:", error)
+      res.status(500).json({
+        success: false,
+        error: "Failed to send response",
+        message: process.env.NODE_ENV === "production" ? "Internal server error" : error.message,
       })
     }
   },
